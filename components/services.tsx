@@ -1,0 +1,82 @@
+import { Sparkles, Building2, Palette, Layers } from "lucide-react"
+
+const services = [
+  {
+    icon: Sparkles,
+    title: "Garage Epoxy",
+    description:
+      "Heavy-duty coatings engineered for the demands of daily garage use. Resistant to chemicals, tire marks, and impacts while delivering a showroom-quality shine.",
+    features: ["Chemical resistant", "Anti-slip texture", "UV stable"],
+  },
+  {
+    icon: Building2,
+    title: "Commercial Epoxy",
+    description:
+      "Industrial-strength solutions for warehouses, showrooms, and retail spaces. Built to withstand high foot traffic and heavy machinery without compromising appearance.",
+    features: ["High traffic rated", "Custom colors", "Fast cure"],
+  },
+  {
+    icon: Palette,
+    title: "Metallic Epoxy",
+    description:
+      "Stunning three-dimensional metallic finishes that create one-of-a-kind artistic floors. Each installation is a unique masterpiece with flowing, pearlescent patterns.",
+    features: ["Unique patterns", "High gloss", "Seamless finish"],
+  },
+  {
+    icon: Layers,
+    title: "Flake Systems",
+    description:
+      "Decorative vinyl chip broadcast systems that combine beauty with durability. Multi-colored flakes hide imperfections while providing excellent texture and grip.",
+    features: ["Texture options", "Hide cracks", "Color blends"],
+  },
+]
+
+export function Services() {
+  return (
+    <section id="services" className="bg-secondary py-24 md:py-32">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="mb-16 mx-auto max-w-2xl text-center">
+          <p className="mb-3 text-xs uppercase tracking-[0.3em] text-primary">
+            What We Offer
+          </p>
+          <h2 className="font-display text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
+            Our Services
+          </h2>
+          <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
+            From residential garages to commercial facilities, we deliver flawless epoxy floor solutions tailored to your exact specifications.
+          </p>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {services.map((service) => (
+            <div
+              key={service.title}
+              className="group rounded-sm border border-border bg-card p-8 transition-all hover:border-primary/40 hover:shadow-[0_0_30px_rgba(37,99,235,0.1)]"
+            >
+              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-sm bg-primary/10">
+                <service.icon className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="font-display text-xl font-bold uppercase tracking-wide text-foreground">
+                {service.title}
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                {service.description}
+              </p>
+              <ul className="mt-6 flex flex-col gap-2">
+                {service.features.map((feature) => (
+                  <li
+                    key={feature}
+                    className="flex items-center gap-2 text-sm text-muted-foreground"
+                  >
+                    <span className="h-1 w-1 rounded-full bg-primary" />
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
