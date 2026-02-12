@@ -23,10 +23,10 @@ const reviews = [
     rating: 5,
   },
   {
-    name: "Michelle Kennedy",
+    name: "Michelle & Kevin Kennedy",
     location: "Basement Gym Floor",
     quote:
-      "The anti-slip finish is perfect for my home gym. Dropped weights haven't left a mark. The charcoal color hides everything and the gloss is stunning.",
+      "The anti-slip finish is perfect for our home gym. Dropped weights haven't left a mark. The charcoal color hides everything and the gloss is stunning. We love how it turned out.",
     rating: 5,
   },
   {
