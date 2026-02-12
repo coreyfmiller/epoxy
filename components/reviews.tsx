@@ -53,10 +53,10 @@ export function Reviews() {
           <p className="mb-3 text-xs uppercase tracking-[0.3em] text-primary">
             Testimonials
           </p>
-          <h2 className="font-display text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
+          <h2 className="font-display text-5xl font-bold uppercase tracking-tight text-foreground md:text-6xl lg:text-7xl">
             What Our Clients Say
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-lg leading-relaxed text-muted-foreground">
+          <p className="mx-auto mt-6 max-w-2xl text-xl leading-relaxed text-muted-foreground">
             Don&apos;t just take our word for it. Here&apos;s what homeowners have to say
             about their transformed floors.
           </p>
@@ -66,24 +66,24 @@ export function Reviews() {
           {reviews.map((review) => (
             <div
               key={review.name}
-              className="rounded-sm border border-border bg-card p-8 transition-all hover:border-primary/30"
+              className="rounded-sm border border-border bg-card p-10 transition-all hover:border-primary/30"
             >
-              <div className="mb-4 flex gap-1">
+              <div className="mb-6 flex gap-1.5">
                 {Array.from({ length: review.rating }).map((_, i) => (
                   <Star
                     key={`star-${review.name}-${i}`}
-                    className="h-4 w-4 fill-primary text-primary"
+                    className="h-5 w-5 fill-primary text-primary"
                   />
                 ))}
               </div>
-              <blockquote className="text-sm leading-relaxed text-muted-foreground">
+              <blockquote className="text-base leading-relaxed text-muted-foreground italic">
                 &ldquo;{review.quote}&rdquo;
               </blockquote>
               <div className="mt-6 border-t border-border pt-4">
-                <p className="font-display text-sm font-bold uppercase tracking-wide text-foreground">
+                <p className="font-display text-base font-bold uppercase tracking-wide text-foreground">
                   {review.name}
                 </p>
-                <p className="mt-1 text-xs uppercase tracking-wider text-muted-foreground">
+                <p className="mt-1 text-sm uppercase tracking-wider text-muted-foreground">
                   {review.location}
                 </p>
               </div>

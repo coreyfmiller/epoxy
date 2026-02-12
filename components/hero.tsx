@@ -37,7 +37,7 @@ export function Hero() {
             <span className="text-balance">Attention</span>
           </h1>
 
-          <p className="mt-6 max-w-lg text-center text-lg leading-relaxed text-muted-foreground md:text-xl">
+          <p className="mt-8 max-w-2xl text-center text-xl leading-relaxed text-muted-foreground md:text-2xl">
             Transform your garage or basement with industrial-grade epoxy coatings.
             Mirror-like finishes engineered to withstand decades of heavy use.
           </p>
@@ -59,14 +59,14 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="mt-16 grid w-full max-w-lg grid-cols-1 gap-8 sm:grid-cols-3 md:mt-20">
+        <div className="mt-20 grid w-full max-w-5xl grid-cols-1 gap-12 sm:grid-cols-3 md:mt-24">
           {stats.map((stat) => (
             <div key={stat.label} className="text-center">
-              <stat.icon className="mx-auto mb-2 h-5 w-5 text-primary" />
-              <div className="font-display text-3xl font-bold text-foreground md:text-4xl">
+              <stat.icon className="mx-auto mb-4 h-8 w-8 text-primary" />
+              <div className="font-display text-5xl font-bold text-foreground md:text-6xl">
                 {stat.value}
               </div>
-              <div className="mt-1 text-xs uppercase tracking-wider text-muted-foreground">
+              <div className="mt-2 text-sm uppercase tracking-[0.2em] text-muted-foreground">
                 {stat.label}
               </div>
             </div>

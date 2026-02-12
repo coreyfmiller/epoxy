@@ -35,32 +35,32 @@ export function Navbar() {
             <Image
               src="/images/logo.png"
               alt="Elite"
-              width={120}
-              height={40}
-              className="h-8 w-auto object-contain brightness-0 invert"
+              width={160}
+              height={52}
+              className="h-10 w-auto object-contain brightness-0 invert"
               priority
             />
-            <span className="w-full text-center text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+            <span className="w-full text-center text-[10px] uppercase tracking-[0.3em] text-muted-foreground mt-1">
               Epoxy Floors
             </span>
           </div>
         </a>
 
-        <div className="hidden items-center gap-8 lg:flex">
+        <div className="hidden items-center gap-10 lg:flex">
           {navLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
-              className="text-sm uppercase tracking-wider text-muted-foreground transition-colors hover:text-foreground"
+              className="text-base uppercase tracking-wider text-muted-foreground transition-colors hover:text-foreground"
             >
               {link.label}
             </a>
           ))}
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 rounded-sm bg-primary px-5 py-2.5 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-all hover:bg-primary/90 hover:shadow-[0_0_20px_rgba(37,99,235,0.3)]"
+            className="inline-flex items-center gap-2 rounded-sm bg-primary px-6 py-3 text-base font-semibold uppercase tracking-wider text-primary-foreground transition-all hover:bg-primary/90 hover:shadow-[0_0_20px_rgba(37,99,235,0.3)]"
           >
-            <Phone className="h-4 w-4" />
+            <Phone className="h-5 w-5" />
             Free Estimate
           </a>
         </div>

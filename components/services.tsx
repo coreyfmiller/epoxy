@@ -39,10 +39,10 @@ export function Services() {
           <p className="mb-3 text-xs uppercase tracking-[0.3em] text-primary">
             What We Offer
           </p>
-          <h2 className="font-display text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
+          <h2 className="font-display text-5xl font-bold uppercase tracking-tight text-foreground md:text-6xl lg:text-7xl">
             Our Services
           </h2>
-          <p className="mt-4 text-lg leading-relaxed text-muted-foreground">
+          <p className="mt-6 text-xl leading-relaxed text-muted-foreground">
             From residential garages to commercial facilities, we deliver flawless epoxy floor solutions tailored to your exact specifications.
           </p>
         </div>
@@ -51,24 +51,24 @@ export function Services() {
           {services.map((service) => (
             <div
               key={service.title}
-              className="group rounded-sm border border-border bg-card p-8 transition-all hover:border-primary/40 hover:shadow-[0_0_30px_rgba(37,99,235,0.1)]"
+              className="group rounded-sm border border-border bg-card p-10 transition-all hover:border-primary/40 hover:shadow-[0_0_30px_rgba(37,99,235,0.1)]"
             >
-              <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-sm bg-primary/10">
-                <service.icon className="h-6 w-6 text-primary" />
+              <div className="mb-8 flex h-14 w-14 items-center justify-center rounded-sm bg-primary/10">
+                <service.icon className="h-7 w-7 text-primary" />
               </div>
-              <h3 className="font-display text-xl font-bold uppercase tracking-wide text-foreground">
+              <h3 className="font-display text-2xl font-bold uppercase tracking-wide text-foreground">
                 {service.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
                 {service.description}
               </p>
-              <ul className="mt-6 flex flex-col gap-2">
+              <ul className="mt-8 flex flex-col gap-3">
                 {service.features.map((feature) => (
                   <li
                     key={feature}
-                    className="flex items-center gap-2 text-sm text-muted-foreground"
+                    className="flex items-center gap-3 text-base text-muted-foreground"
                   >
-                    <span className="h-1 w-1 rounded-full bg-primary" />
+                    <span className="h-1.5 w-1.5 rounded-full bg-primary" />
                     {feature}
                   </li>
                 ))}
