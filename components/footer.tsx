@@ -1,5 +1,13 @@
 import Image from "next/image"
 
+const navLinks = [
+  { label: "Services", href: "#services" },
+  { label: "Gallery", href: "#gallery" },
+  { label: "Process", href: "#process" },
+  { label: "Reviews", href: "#reviews" },
+  { label: "Contact", href: "#contact" },
+]
+
 export function Footer() {
   return (
     <footer className="border-t border-border bg-background py-24 md:py-32">

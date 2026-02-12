@@ -108,10 +108,10 @@ export function Contact() {
                   />
                 </div>
               </div>
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-3">
                 <label
                   htmlFor="email"
-                  className="text-xs uppercase tracking-wider text-muted-foreground"
+                  className="text-sm font-medium uppercase tracking-widest text-muted-foreground"
                 >
                   Email
                 </label>
@@ -121,13 +121,13 @@ export function Contact() {
                   type="email"
                   required
                   placeholder="john@example.com"
-                  className="rounded-sm border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                  className="rounded-sm border border-border bg-background px-6 py-4 text-base text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
                 />
               </div>
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-3">
                 <label
                   htmlFor="project"
-                  className="text-xs uppercase tracking-wider text-muted-foreground"
+                  className="text-sm font-medium uppercase tracking-widest text-muted-foreground"
                 >
                   Project Type
                 </label>
@@ -136,7 +136,7 @@ export function Contact() {
                   name="project"
                   required
                   defaultValue=""
-                  className="rounded-sm border border-border bg-background px-4 py-3 text-sm text-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                  className="rounded-sm border border-border bg-background px-6 py-4 text-base text-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
                 >
                   <option value="" disabled>
                     Select a service...
@@ -148,10 +148,10 @@ export function Contact() {
                   <option value="flake">Flake System</option>
                 </select>
               </div>
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-3">
                 <label
                   htmlFor="message"
-                  className="text-xs uppercase tracking-wider text-muted-foreground"
+                  className="text-sm font-medium uppercase tracking-widest text-muted-foreground"
                 >
                   Message
                 </label>
@@ -160,7 +160,7 @@ export function Contact() {
                   name="message"
                   rows={4}
                   placeholder="Tell us about your project..."
-                  className="resize-none rounded-sm border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                  className="resize-none rounded-sm border border-border bg-background px-6 py-4 text-base text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
                 />
               </div>
 
