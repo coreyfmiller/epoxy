@@ -37,10 +37,10 @@ const reviews = [
     rating: 5,
   },
   {
-    name: "Karen Williams",
+    name: "Karen & Michael Williams",
     location: "Basement Living Area",
     quote:
-      "Our basement had moisture issues and they solved everything. The epoxy sealed the floor beautifully and the metallic blue finish gets compliments from everyone who visits.",
+      "Our basement had moisture issues and they solved everything. The epoxy sealed the floor beautifully and the metallic blue finish gets compliments from everyone who visits our home.",
     rating: 5,
   },
 ]
