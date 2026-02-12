@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { useState, useEffect } from "react"
 import { Menu, X, Phone } from "lucide-react"
 
@@ -23,25 +24,21 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
           ? "bg-background/95 backdrop-blur-md border-b border-border shadow-lg"
           : "bg-transparent"
-      }`}
+        }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <a href="#" className="flex items-center gap-2">
-          <div className="flex h-10 w-10 items-center justify-center rounded-sm bg-primary">
-            <span className="font-display text-lg font-bold text-primary-foreground">E</span>
-          </div>
-          <div className="flex flex-col leading-none">
-            <span className="font-display text-lg font-bold uppercase tracking-wider text-foreground">
-              Elite
-            </span>
-            <span className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-              Epoxy Floors
-            </span>
-          </div>
+          <Image
+            src="/images/logo.png"
+            alt="Elite Epoxy Floors"
+            width={180}
+            height={48}
+            className="h-10 w-auto object-contain brightness-0 invert"
+            priority
+          />
         </a>
 
         <div className="hidden items-center gap-8 lg:flex">
