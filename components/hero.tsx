@@ -4,7 +4,7 @@ import { ArrowRight, Shield, Clock, Award } from "lucide-react"
 const stats = [
   { icon: Shield, label: "Year Warranty", value: "15" },
   { icon: Clock, label: "Day Cure Time", value: "1" },
-  { icon: Award, label: "5-Star Reviews", value: "500+" },
+  { icon: Award, label: "5-Star Reviews", value: "100+" },
 ]
 
 export function Hero() {
