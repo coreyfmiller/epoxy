@@ -25,20 +25,25 @@ export function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-          ? "bg-background/95 backdrop-blur-md border-b border-border shadow-lg"
-          : "bg-transparent"
+        ? "bg-background/95 backdrop-blur-md border-b border-border shadow-lg"
+        : "bg-transparent"
         }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <a href="#" className="flex items-center gap-2">
-          <Image
-            src="/images/logo.png"
-            alt="Elite Epoxy Floors"
-            width={180}
-            height={48}
-            className="h-10 w-auto object-contain brightness-0 invert"
-            priority
-          />
+          <div className="flex flex-col leading-none">
+            <Image
+              src="/images/logo.png"
+              alt="Elite"
+              width={120}
+              height={40}
+              className="h-8 w-auto object-contain brightness-0 invert"
+              priority
+            />
+            <span className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+              Epoxy Floors
+            </span>
+          </div>
         </a>
 
         <div className="hidden items-center gap-8 lg:flex">
