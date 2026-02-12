@@ -25,8 +25,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${oswald.variable}`}>
-      <body className="font-sans antialiased">{children}</body>
+    <html lang="en" className={`${inter.variable} ${oswald.variable} overflow-x-hidden`}>
+      <body className="font-sans antialiased overflow-x-hidden">{children}</body>
     </html>
   )
 }

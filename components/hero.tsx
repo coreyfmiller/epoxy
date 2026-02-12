@@ -9,7 +9,7 @@ const stats = [
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen overflow-hidden">
+    <section className="relative min-h-screen overflow-x-hidden">
       <div className="absolute inset-0">
         <Image
           src="/images/hero-floor.jpg"
@@ -29,7 +29,7 @@ export function Hero() {
             Premium Epoxy Floor Coatings
           </div>
 
-          <h1 className="font-display text-5xl font-bold uppercase leading-[1.05] tracking-tight text-foreground md:text-7xl lg:text-8xl">
+          <h1 className="font-display text-4xl font-bold uppercase leading-[1.05] tracking-tight text-foreground sm:text-5xl md:text-7xl lg:text-8xl">
             <span className="text-balance">Floors That</span>
             <br />
             <span className="text-primary">Command</span>
@@ -59,7 +59,7 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="mt-16 grid max-w-lg grid-cols-3 gap-6 md:mt-20">
+        <div className="mt-16 grid w-full max-w-lg grid-cols-1 gap-8 sm:grid-cols-3 md:mt-20">
           {stats.map((stat) => (
             <div key={stat.label} className="text-center">
               <stat.icon className="mx-auto mb-2 h-5 w-5 text-primary" />
