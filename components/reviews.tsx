@@ -2,42 +2,42 @@ import { Star } from "lucide-react"
 
 const reviews = [
   {
-    name: "James R.",
-    location: "Garage Floor - 3-Car",
+    name: "James & Sarah Richardson",
+    location: "Garage & Basement Transformation",
     quote:
-      "Absolutely blown away by the transformation. My garage looks like a luxury showroom. The metallic epoxy has an incredible depth to it that photos don't do justice.",
+      "Absolutely blown away by the transformation. Our garage looks like a luxury showroom and the basement is finally a space we enjoy. The metallic epoxy has an incredible depth to it.",
     rating: 5,
   },
   {
-    name: "Sarah M.",
+    name: "Sarah Miller",
     location: "Basement Floor",
     quote:
       "We turned our unfinished basement into a beautiful entertainment space. The team was professional, clean, and finished ahead of schedule. Couldn't be happier.",
     rating: 5,
   },
   {
-    name: "David L.",
+    name: "David Lawson",
     location: "Garage Floor - 2-Car",
     quote:
       "Three years in and the floor still looks brand new. Oil drips, dropped tools, road salt - nothing has damaged it. Best home investment I've made.",
     rating: 5,
   },
   {
-    name: "Michelle K.",
+    name: "Michelle Kennedy",
     location: "Basement Gym Floor",
     quote:
       "The anti-slip finish is perfect for my home gym. Dropped weights haven't left a mark. The charcoal color hides everything and the gloss is stunning.",
     rating: 5,
   },
   {
-    name: "Robert T.",
+    name: "Robert Thompson",
     location: "Garage Floor - 2-Car",
     quote:
       "From the initial estimate to the final walkthrough, every step was handled professionally. The flake system they recommended was the perfect choice for our garage.",
     rating: 5,
   },
   {
-    name: "Karen W.",
+    name: "Karen Williams",
     location: "Basement Living Area",
     quote:
       "Our basement had moisture issues and they solved everything. The epoxy sealed the floor beautifully and the metallic blue finish gets compliments from everyone who visits.",
