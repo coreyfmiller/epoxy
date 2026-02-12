@@ -29,29 +29,29 @@ export function Navbar() {
         : "bg-transparent"
         }`}
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 md:py-8">
         <a href="#" className="flex items-center">
           <div className="flex flex-col items-center leading-none">
             <Image
               src="/images/logo.png"
               alt="Elite"
-              width={160}
-              height={52}
-              className="h-10 w-auto object-contain brightness-0 invert"
+              width={200}
+              height={64}
+              className="h-14 w-auto md:h-18 object-contain brightness-0 invert"
               priority
             />
-            <span className="w-full text-center text-[10px] uppercase tracking-[0.3em] text-muted-foreground mt-1">
+            <span className="w-full text-center text-[10px] md:text-[12px] uppercase tracking-[0.4em] text-muted-foreground mt-2">
               Epoxy Floors
             </span>
           </div>
         </a>
 
-        <div className="hidden items-center gap-10 lg:flex">
+        <div className="hidden items-center gap-12 lg:flex">
           {navLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
-              className="text-base uppercase tracking-wider text-muted-foreground transition-colors hover:text-foreground"
+              className="text-sm uppercase tracking-[0.3em] text-muted-foreground transition-colors hover:text-foreground font-medium"
             >
               {link.label}
             </a>

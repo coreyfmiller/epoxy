@@ -45,18 +45,17 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="bg-secondary py-24 md:py-32">
-      <div className="mx-auto max-w-3xl px-6">
-        <div className="mb-16 text-center">
-          <p className="mb-3 text-xs uppercase tracking-[0.3em] text-primary">
-            Get In Touch
+    <section id="contact" className="bg-secondary py-32 md:py-48">
+      <div className="mx-auto max-w-4xl px-6">
+        <div className="mb-20 text-center">
+          <p className="mb-4 text-sm uppercase tracking-[0.4em] text-primary">
+            Get Started
           </p>
-          <h2 className="font-display text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
-            Free Estimate
+          <h2 className="font-display text-5xl font-bold uppercase tracking-tight text-foreground md:text-7xl lg:text-8xl">
+            Request Free Estimate
           </h2>
-          <p className="mx-auto mt-4 max-w-md text-lg leading-relaxed text-muted-foreground">
-            Ready to transform your floors? Fill out the form and we&apos;ll get
-            back to you within 24 hours with a detailed quote.
+          <p className="mx-auto mt-8 max-w-2xl text-xl md:text-2xl leading-relaxed text-muted-foreground">
+            Ready to transform your floors? Fill out the form below and we&apos;ll get back to you within 24 hours.
           </p>
         </div>
 
@@ -76,10 +75,10 @@ export function Contact() {
           ) : (
             <form onSubmit={handleSubmit} className="flex flex-col gap-6">
               <div className="grid gap-6 sm:grid-cols-2">
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-3">
                   <label
                     htmlFor="name"
-                    className="text-xs uppercase tracking-wider text-muted-foreground"
+                    className="text-sm font-medium uppercase tracking-widest text-muted-foreground"
                   >
                     Full Name
                   </label>
@@ -89,13 +88,13 @@ export function Contact() {
                     type="text"
                     required
                     placeholder="John Smith"
-                    className="rounded-sm border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                    className="rounded-sm border border-border bg-background px-6 py-4 text-base text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
                   />
                 </div>
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-3">
                   <label
                     htmlFor="phone"
-                    className="text-xs uppercase tracking-wider text-muted-foreground"
+                    className="text-sm font-medium uppercase tracking-widest text-muted-foreground"
                   >
                     Phone
                   </label>
@@ -105,7 +104,7 @@ export function Contact() {
                     type="tel"
                     required
                     placeholder="(555) 123-4567"
-                    className="rounded-sm border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+                    className="rounded-sm border border-border bg-background px-6 py-4 text-base text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
                   />
                 </div>
               </div>
@@ -172,7 +171,7 @@ export function Contact() {
               <button
                 type="submit"
                 disabled={loading}
-                className="mt-2 inline-flex items-center justify-center gap-2 rounded-sm bg-primary px-8 py-4 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-all hover:shadow-[0_0_30px_rgba(37,99,235,0.4)] disabled:opacity-70"
+                className="mt-6 inline-flex items-center justify-center gap-3 rounded-sm bg-primary px-10 py-5 text-base font-semibold uppercase tracking-widest text-primary-foreground transition-all hover:shadow-[0_0_30px_rgba(37,99,235,0.4)] disabled:opacity-70"
               >
                 {loading ? (
                   <span className="animate-pulse">Sending...</span>

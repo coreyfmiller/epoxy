@@ -29,7 +29,7 @@ export function Hero() {
             Premium Epoxy Floor Coatings
           </div>
 
-          <h1 className="font-display text-4xl font-bold uppercase leading-[1.05] tracking-tight text-foreground sm:text-5xl md:text-7xl lg:text-8xl">
+          <h1 className="font-display text-5xl font-bold uppercase leading-none tracking-tight text-foreground sm:text-7xl md:text-8xl lg:text-9xl">
             <span className="text-balance">Floors That</span>
             <br />
             <span className="text-primary">Command</span>
@@ -59,14 +59,14 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="mt-20 grid w-full max-w-5xl grid-cols-1 gap-12 sm:grid-cols-3 md:mt-24">
+        <div className="mt-24 grid w-full max-w-6xl grid-cols-1 gap-16 sm:grid-cols-3 md:mt-32">
           {stats.map((stat) => (
             <div key={stat.label} className="text-center">
-              <stat.icon className="mx-auto mb-4 h-8 w-8 text-primary" />
-              <div className="font-display text-5xl font-bold text-foreground md:text-6xl">
+              <stat.icon className="mx-auto mb-6 h-12 w-12 text-primary" />
+              <div className="font-display text-6xl font-bold text-foreground md:text-8xl">
                 {stat.value}
               </div>
-              <div className="mt-2 text-sm uppercase tracking-[0.2em] text-muted-foreground">
+              <div className="mt-3 text-sm font-medium uppercase tracking-[0.3em] text-muted-foreground">
                 {stat.label}
               </div>
             </div>

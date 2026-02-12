@@ -47,16 +47,16 @@ const reviews = [
 
 export function Reviews() {
   return (
-    <section id="reviews" className="bg-background py-24 md:py-32">
+    <section id="reviews" className="bg-background py-32 md:py-48">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="mb-16 text-center">
-          <p className="mb-3 text-xs uppercase tracking-[0.3em] text-primary">
+        <div className="mb-24 text-center">
+          <p className="mb-4 text-sm uppercase tracking-[0.4em] text-primary">
             Testimonials
           </p>
-          <h2 className="font-display text-5xl font-bold uppercase tracking-tight text-foreground md:text-6xl lg:text-7xl">
+          <h2 className="font-display text-5xl font-bold uppercase tracking-tight text-foreground md:text-7xl lg:text-8xl">
             What Our Clients Say
           </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-xl leading-relaxed text-muted-foreground">
+          <p className="mx-auto mt-8 max-w-2xl text-xl md:text-2xl leading-relaxed text-muted-foreground">
             Don&apos;t just take our word for it. Here&apos;s what homeowners have to say
             about their transformed floors.
           </p>
@@ -76,7 +76,7 @@ export function Reviews() {
                   />
                 ))}
               </div>
-              <blockquote className="text-base leading-relaxed text-muted-foreground italic">
+              <blockquote className="text-lg md:text-xl leading-relaxed text-muted-foreground italic">
                 &ldquo;{review.quote}&rdquo;
               </blockquote>
               <div className="mt-6 border-t border-border pt-4">

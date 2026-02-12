@@ -47,16 +47,16 @@ export function Gallery() {
   const [selected, setSelected] = useState<number | null>(null)
 
   return (
-    <section id="gallery" className="bg-background py-24 md:py-32">
+    <section id="gallery" className="bg-background py-32 md:py-48">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="mb-16 text-center">
-          <p className="mb-3 text-xs uppercase tracking-[0.3em] text-primary">
-            Portfolio
+        <div className="mb-24 text-center">
+          <p className="mb-4 text-sm uppercase tracking-[0.4em] text-primary">
+            Our Portfolio
           </p>
-          <h2 className="font-display text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
-            Our Recent Work
+          <h2 className="font-display text-5xl font-bold uppercase tracking-tight text-foreground md:text-7xl lg:text-8xl">
+            Recent Projects
           </h2>
-          <p className="mx-auto mt-4 max-w-xl text-lg leading-relaxed text-muted-foreground">
+          <p className="mx-auto mt-6 max-w-xl text-lg md:text-xl leading-relaxed text-muted-foreground">
             Every floor we coat is a testament to precision craftsmanship. Browse our latest garage and basement transformations.
           </p>
         </div>

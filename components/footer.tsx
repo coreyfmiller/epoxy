@@ -2,58 +2,37 @@ import Image from "next/image"
 
 export function Footer() {
   return (
-    <footer className="border-t border-border bg-background py-12">
+    <footer className="border-t border-border bg-background py-24 md:py-32">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
+        <div className="flex flex-col items-center justify-between gap-12 md:flex-row">
           <div className="flex items-center">
             <div className="flex flex-col items-center leading-none">
               <Image
                 src="/images/logo.png"
                 alt="Elite"
-                width={100}
-                height={32}
-                className="h-6 w-auto object-contain brightness-0 invert"
+                width={180}
+                height={58}
+                className="h-12 w-auto md:h-16 object-contain brightness-0 invert"
               />
-              <span className="w-full text-center text-[8px] uppercase tracking-[0.3em] text-muted-foreground">
+              <span className="w-full text-center text-[10px] md:text-[12px] uppercase tracking-[0.4em] text-muted-foreground mt-2">
                 Epoxy Floors
               </span>
             </div>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-6">
-            <a
-              href="#services"
-              className="text-xs uppercase tracking-wider text-muted-foreground transition-colors hover:text-foreground"
-            >
-              Services
-            </a>
-            <a
-              href="#gallery"
-              className="text-xs uppercase tracking-wider text-muted-foreground transition-colors hover:text-foreground"
-            >
-              Gallery
-            </a>
-            <a
-              href="#process"
-              className="text-xs uppercase tracking-wider text-muted-foreground transition-colors hover:text-foreground"
-            >
-              Process
-            </a>
-            <a
-              href="#reviews"
-              className="text-xs uppercase tracking-wider text-muted-foreground transition-colors hover:text-foreground"
-            >
-              Reviews
-            </a>
-            <a
-              href="#contact"
-              className="text-xs uppercase tracking-wider text-muted-foreground transition-colors hover:text-foreground"
-            >
-              Contact
-            </a>
+          <div className="flex flex-wrap items-center justify-center gap-10">
+            {navLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                className="text-xs md:text-sm uppercase tracking-[0.3em] text-muted-foreground transition-colors hover:text-foreground font-medium"
+              >
+                {link.label}
+              </a>
+            ))}
           </div>
 
-          <p className="text-xs text-muted-foreground">
+          <p className="text-sm tracking-wide text-muted-foreground">
             &copy; {new Date().getFullYear()} Elite Epoxy Floors. All rights reserved.
           </p>
         </div>

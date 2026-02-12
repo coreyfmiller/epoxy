@@ -33,16 +33,16 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="bg-secondary py-24 md:py-32">
+    <section id="services" className="bg-secondary py-32 md:py-48">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="mb-16 mx-auto max-w-2xl text-center">
-          <p className="mb-3 text-xs uppercase tracking-[0.3em] text-primary">
+        <div className="mb-24 mx-auto max-w-3xl text-center">
+          <p className="mb-4 text-sm uppercase tracking-[0.4em] text-primary">
             What We Offer
           </p>
-          <h2 className="font-display text-5xl font-bold uppercase tracking-tight text-foreground md:text-6xl lg:text-7xl">
+          <h2 className="font-display text-5xl font-bold uppercase tracking-tight text-foreground md:text-7xl lg:text-8xl">
             Our Services
           </h2>
-          <p className="mt-6 text-xl leading-relaxed text-muted-foreground">
+          <p className="mt-8 text-xl md:text-2xl leading-relaxed text-muted-foreground">
             From residential garages to commercial facilities, we deliver flawless epoxy floor solutions tailored to your exact specifications.
           </p>
         </div>
