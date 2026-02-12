@@ -12,7 +12,7 @@ export function Footer() {
                 alt="Elite"
                 width={100}
                 height={32}
-                className="h-6 w-auto object-contain brightness-0 invert"
+                className="h-6 w-auto object-contain"
               />
               <span className="text-[8px] uppercase tracking-[0.3em] text-muted-foreground">
                 Epoxy Floors
