@@ -37,7 +37,7 @@ export function Navbar() {
               alt="Elite"
               width={120}
               height={40}
-              className="h-8 w-auto object-contain"
+              className="h-8 w-auto object-contain brightness-0 invert"
               priority
             />
             <span className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
