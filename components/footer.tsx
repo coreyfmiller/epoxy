@@ -6,7 +6,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
           <div className="flex items-center gap-2">
-            <div className="flex flex-col leading-none">
+            <div className="flex flex-col items-center leading-none">
               <Image
                 src="/images/logo.png"
                 alt="Elite"
