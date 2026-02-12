@@ -5,6 +5,44 @@ import { Send, Phone, Mail, MapPin } from "lucide-react"
 
 export function Contact() {
   const [submitted, setSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setLoading(true)
+    setError(null)
+
+    const formData = new FormData(e.currentTarget)
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      phone: formData.get("phone"),
+      project: formData.get("project"),
+      message: formData.get("message"),
+    }
+
+    try {
+      const response = await fetch("/api/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+
+      if (!response.ok) {
+        throw new Error("Failed to send message")
+      }
+
+      setSubmitted(true)
+    } catch (err) {
+      setError("Something went wrong. Please try again or call us directly.")
+      console.error(err)
+    } finally {
+      setLoading(false)
+    }
+  }
 
   return (
     <section id="contact" className="bg-secondary py-24 md:py-32">
@@ -36,13 +74,7 @@ export function Contact() {
               </p>
             </div>
           ) : (
-            <form
-              onSubmit={(e) => {
-                e.preventDefault()
-                setSubmitted(true)
-              }}
-              className="flex flex-col gap-6"
-            >
+            <form onSubmit={handleSubmit} className="flex flex-col gap-6">
               <div className="grid gap-6 sm:grid-cols-2">
                 <div className="flex flex-col gap-2">
                   <label
@@ -53,6 +85,7 @@ export function Contact() {
                   </label>
                   <input
                     id="name"
+                    name="name"
                     type="text"
                     required
                     placeholder="John Smith"
@@ -68,6 +101,7 @@ export function Contact() {
                   </label>
                   <input
                     id="phone"
+                    name="phone"
                     type="tel"
                     required
                     placeholder="(555) 123-4567"
@@ -84,6 +118,7 @@ export function Contact() {
                 </label>
                 <input
                   id="email"
+                  name="email"
                   type="email"
                   required
                   placeholder="john@example.com"
@@ -99,6 +134,7 @@ export function Contact() {
                 </label>
                 <select
                   id="project"
+                  name="project"
                   required
                   defaultValue=""
                   className="rounded-sm border border-border bg-background px-4 py-3 text-sm text-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
@@ -122,17 +158,30 @@ export function Contact() {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
                   rows={4}
                   placeholder="Tell us about your project..."
                   className="resize-none rounded-sm border border-border bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
                 />
               </div>
+
+              {error && (
+                <p className="text-sm text-destructive">{error}</p>
+              )}
+
               <button
                 type="submit"
-                className="mt-2 inline-flex items-center justify-center gap-2 rounded-sm bg-primary px-8 py-4 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-all hover:shadow-[0_0_30px_rgba(37,99,235,0.4)]"
+                disabled={loading}
+                className="mt-2 inline-flex items-center justify-center gap-2 rounded-sm bg-primary px-8 py-4 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-all hover:shadow-[0_0_30px_rgba(37,99,235,0.4)] disabled:opacity-70"
               >
-                <Send className="h-4 w-4" />
-                Request Free Estimate
+                {loading ? (
+                  <span className="animate-pulse">Sending...</span>
+                ) : (
+                  <>
+                    <Send className="h-4 w-4" />
+                    Request Free Estimate
+                  </>
+                )}
               </button>
             </form>
           )}
