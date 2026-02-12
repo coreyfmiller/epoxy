@@ -5,7 +5,7 @@ export function Footer() {
     <footer className="border-t border-border bg-background py-12">
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center">
             <div className="flex flex-col items-center leading-none">
               <Image
                 src="/images/logo.png"
@@ -14,7 +14,7 @@ export function Footer() {
                 height={32}
                 className="h-6 w-auto object-contain brightness-0 invert"
               />
-              <span className="text-[8px] uppercase tracking-[0.3em] text-muted-foreground">
+              <span className="w-full text-center text-[8px] uppercase tracking-[0.3em] text-muted-foreground">
                 Epoxy Floors
               </span>
             </div>

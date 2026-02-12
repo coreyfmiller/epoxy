@@ -30,7 +30,7 @@ export function Navbar() {
         }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        <a href="#" className="flex items-center gap-2">
+        <a href="#" className="flex items-center">
           <div className="flex flex-col items-center leading-none">
             <Image
               src="/images/logo.png"
@@ -40,7 +40,7 @@ export function Navbar() {
               className="h-8 w-auto object-contain brightness-0 invert"
               priority
             />
-            <span className="text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+            <span className="w-full text-center text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
               Epoxy Floors
             </span>
           </div>
